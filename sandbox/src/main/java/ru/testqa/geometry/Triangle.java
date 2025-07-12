@@ -18,7 +18,7 @@ public class Triangle {
     }
 
     public double Area(){
-        double p = this.Perimeter();
+        double p = this.Perimeter()/2;
         return Math.sqrt(p*(p-this.aSide)*(p-this.bSide)*(p-this.cSide));
     }
 }
