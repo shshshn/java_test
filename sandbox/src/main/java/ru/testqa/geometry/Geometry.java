@@ -1,3 +1,5 @@
+package ru.testqa.geometry;
+
 public class Geometry {
     public static void main(String[] args) {
         var side = 5;
