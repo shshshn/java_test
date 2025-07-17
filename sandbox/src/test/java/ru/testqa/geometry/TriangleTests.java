@@ -16,4 +16,35 @@ public class TriangleTests {
         Assertions.assertEquals(6,a.Area());
     }
 
+    @Test
+    void wrongSide() {
+        try {
+            new Triangle(1,2,4);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {};
+        try {
+            new Triangle(5,-1,4);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {};
+        try {
+            new Triangle(4,2,-1);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {};
+    }
+
+    @Test
+    void wrongSidesSumm() {
+        try {
+            new Triangle(10, 5, 2);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {};
+    }
+
+    @Test
+    void equalTriangles1() {
+        var t1 = new Triangle(3,4,5);
+        var t2 = new Triangle(5,3,4);
+        Assertions.assertEquals(t1,t2);
+    }
+
 }
